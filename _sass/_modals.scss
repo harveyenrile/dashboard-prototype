@@ -1,0 +1,142 @@
+.ui-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  &.ui-modal-static{
+    position: relative;
+    display: block;
+  }
+}
+// add .modal-open to body class
+.modal-open{
+  overflow: hidden;
+  // position: fixed;
+  height: 100%;
+  width: 100%;
+  .ui-modal{
+    overflow-x: hidden;
+    overflow-y: auto;  
+  }
+  
+}
+.ui-modal-box{
+  position: relative;
+  width: auto;
+  max-width: 600px;
+  margin: 30px;
+}
+.ui-modal-box-cart{
+  max-width: 100%;
+  .ui-button-o{
+    margin-bottom: 0;
+  }
+  .modal-cart-item{
+    margin-bottom: 0;
+    border-top: 1px solid $grey-color-light;
+  }
+  .coupon-card{
+    padding-bottom: 0;
+  }
+  .cart-item-summary{
+    margin-bottom: 30px;
+    h1,h3{
+      margin-bottom: 0;
+    }
+  }
+  .installment-panel{
+    border: 2px solid $grey-color-lighter;
+    border-radius: 4px;
+    padding: 15px;
+    strong.installment-panel-title{
+      color: $status-highlight;
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+}
+.ui-modal-content{
+  position: relative;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+  -webkit-box-shadow: 0 2px 12px rgba(0,0,0,.2);
+  box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+.ui-modal-header,
+.ui-modal-body,
+.ui-modal-section,
+.ui-modal-footer{
+  padding: 20px 30px;
+}
+.ui-modal-footer{
+  &.bordered{
+    border-top: 1px solid $grey-color-light;
+  }
+  .ui-button{
+    margin-bottom: 0;
+  }
+}
+.ui-modal-header{
+  h4{
+    margin-bottom: 0;
+  }
+  .ui-modal-close{
+    float: right;
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: .3;
+    background-image: url(../images/close.svg);
+    width: 18px;
+    height: 18px;
+    transition: .15s linear opacity;
+    margin-top: 5px;
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
+.ui-modal-body{
+  
+}
+.ui-modal-footer{
+
+}
+
+.ui-block-selection{
+  padding: 0 0 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $grey-color-light;
+  .ui-block-selection_value{
+    font-size: $large-font-size;
+    &.coupon-qty{
+      font-size: $xxxlarge-font-size;
+      font-weight: 300;
+      display: block;
+      width: 50px;
+      text-align: center;
+    }
+  }
+  .coupon-qty-left{
+    color: $grey-color;
+    font-size: $small-font-size;
+  }
+  h6{
+    margin-bottom: 5px;
+  }
+  .ui-block-selection-edit,
+  .ui-qty-selector{
+    float: right;
+  }
+  .ui-qty-selector{
+    margin-top: 10px;
+  }
+}

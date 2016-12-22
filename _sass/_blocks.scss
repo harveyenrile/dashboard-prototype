@@ -1,0 +1,48 @@
+.hero{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1{
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  font-size: 15px;
+  &.home-hero{
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+.page-content{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.collection-title{
+  margin-bottom: 25px;
+  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: 10px;
+  overflow: hidden;
+  zoom: 1;
+  h4,h5,h6{
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  &.w-link{
+    position: relative;
+    a.see-more{
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+  }
+  &.collection-title-noborder{
+    border-bottom: 1px solid transparent;
+  }
+}
+.block-notification{
+  background-color: $status-default;
+  overflow: hidden;
+  zoom: 1;
+}
+.page-section-panel{
+  margin-top: 50px;
+}

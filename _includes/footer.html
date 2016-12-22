@@ -1,0 +1,143 @@
+
+<div class="ui-modal modal">
+  <div class="ui-modal-header">
+    <h4>
+      Weekly Conversion Trend
+    </h4>
+  </div>
+  <div class="ui-modal-body">
+    <canvas id="myConversion" width="100%"></canvas>  
+  </div>
+  <div class="ui-modal-footer bordered text-right">
+    <a href="#close" rel="modal:close" class="ui-button">Dismiss</a>
+  </div>
+  
+</div>
+
+<script>
+
+var ctx = document.getElementById("mySessions");
+var ctx1 = document.getElementById("myRevenue");
+var ctx2 = document.getElementById("myConversion");
+var sessionData = {
+
+      labels: ["Dec 16", "Dec 17", "Dec 18", "Dec 19", "Dec 20", "Dec 21", "Dec 22"],
+      datasets: [
+          {
+              label: "Email",
+              fill: false,
+              borderColor: "#FFAE75",
+              pointBorderColor: "#999",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              data: [3365, 3683, 4959, 5016, 3145, 5237, 3197],
+              spanGaps: false,
+          },
+          {
+              label: "Organic",
+              fill: false,
+              borderColor: "#B9DCF7",
+              pointBorderColor: "#999",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              data: [3327, 4270, 3969, 4010, 3655, 3331, 2692],
+              spanGaps: false,
+          },
+          {
+              label: "Social",
+              fill: false,
+              borderColor: "#E7DFC6",
+              pointBorderColor: "#999",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              data: [376, 654, 571, 934, 1020, 545, 443],
+              spanGaps: false,
+          },
+          {
+              label: "Direct",
+              fill: false,
+              borderColor: "#8ADB9F",
+              pointBorderColor: "#999",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              data: [2125, 2631, 2361, 2262, 2153, 1910, 1551],
+              spanGaps: false,
+          },
+      ]
+    
+}
+var conversionData = {
+
+      labels: ["Dec 16", "Dec 17", "Dec 18", "Dec 19", "Dec 20", "Dec 21", "Dec 22"],
+      datasets: [
+          {
+              label: "Conversion %",
+              fill: false,
+              borderColor: "#FFAE75",
+              pointBorderColor: "#999",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              data: [1.24, 1.23, 1.18, 1.28, 1.52, 1.80, 1.53],
+              spanGaps: false,
+          },
+      ]
+    
+}
+
+var myConversion = new Chart(ctx2, {
+    type: 'line',
+    options: {
+      maintainAspectRatio: 'false',
+      responsive: true,
+    },
+    data: conversionData
+});
+var mySessions = new Chart(ctx, {
+    type: 'line',
+    options: {
+      maintainAspectRatio: 'false',
+      responsive: true,
+    },
+    data: sessionData
+});
+
+var myRevenue = new Chart(ctx1, {
+    type: 'pie',
+    options: {
+      tooltips: false,
+      hover: false
+    },
+    data: {
+        labels: ["Hotels", "Getaways", "Beauty", "Dining"],
+        datasets: [{
+            label: '# of Votes',
+            data: [3365, 3327, 2125, 376],
+            backgroundColor: [
+                '#EA733C',
+                '#E7DFC6',
+                '#8ADB9F',
+                '#54426B',
+            ],
+        borderWidth: 0,
+        }]
+    },
+});
+
+$('a[data-modal]').click(function(event) {
+  $(".ui-modal").modal();
+  return false;
+});
+$('.day-selector-slide').slick({
+  slidesToShow: 7,
+  arrows: true,
+  slidesToScroll: 7,
+  draggable: true,
+  infinite: false,
+  initialSlide: 13
+});
+</script>

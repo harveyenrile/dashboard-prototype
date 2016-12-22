@@ -1,0 +1,22 @@
+.filter{
+  display: block;
+  margin-bottom: 20px;
+  .filter-label{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $small-font-size;
+  }
+}
+a.filter-pill{
+  display: inline-block;
+  padding: 5px 15px;
+  color: $grey-color-dark;
+  font-weight: 700;
+  border-radius: 2em;
+  text-decoration: none;
+  &:hover{
+    color: $text-color;
+  }
+}

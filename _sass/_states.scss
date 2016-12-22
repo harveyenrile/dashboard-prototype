@@ -1,0 +1,63 @@
+.h-state{
+  font-size: $small-font-size;
+  display: inline-block;
+  vertical-align: middle;
+  color: $text-color;
+  text-transform: uppercase;
+  font-weight: 400;
+  &.h-state-valid{
+    color: $status-valid;
+  }
+}
+.has-error{
+  input[type=text], select{
+    border-color: $status-warning;
+    &:focus{
+      border-color: $status-warning;
+    }
+  }
+
+}
+
+.is-disabled{
+  &.coupon-card{
+    .tile-thumbnail, .coupon-card_name, .coupon-card_name + strong, .coupon-card_metalist{
+      opacity: .3;
+    }
+    .coupon-card_actions .coupon-card_metalist{
+      opacity: 1;
+    }
+  }
+  &.ui-qty-selector-button{
+    opacity: .3;
+  }
+}
+
+.is-selected{
+  &.payment-option-selectable{
+    cursor: default;
+    .i-round-check{
+      background-color: $brand-color;
+      border-color: $brand-color;
+      &:before{
+        background-image: url(../images/check.svg);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      
+    }
+  }
+  .payment-option-collapsible{
+    display: block;
+  }
+  &.filter-pill{
+    background-color: $grey-color-light;
+    color: $text-color;
+    cursor: default;
+  }
+}
