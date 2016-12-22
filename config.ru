@@ -7,7 +7,7 @@ use Rack::TryStatic,
   header_rules: [
     [['html'],  { 'Content-Type'  => 'text/html; charset=utf-8' }],
     [['css'],   { 'Content-Type'  => 'text/css' }],
-    [['js'],    { 'Content-Type'  => 'text/js' }],
+    [['js'],    { 'Content-Type'  => 'text/javascript' }],
     [['png'],   { 'Content-Type'  => 'image/png' }],
     ['/assets', { 'Cache-Control' => 'public, max-age=31536000' }],
   ]
