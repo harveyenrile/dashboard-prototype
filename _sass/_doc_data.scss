@@ -34,15 +34,24 @@
     flex-grow: 1;
   }
 }
-h3.data-num{
+h2.data-num{
   font-size: 4em;
 }
-h4.data-num{
+h3.data-num{
   font-size: 2em;
   .data-sub-label{
     font-size: $small-font-size;
   }
 }
+.percent-30{
+    color: #F4565D;
+  }
+  .percent-50{
+    color: #F6A623;
+  }
+  .percent-normal{
+    color: #32D192;
+  }
 .data-num{  
   font-weight: 300;
   margin-bottom: 20px;
@@ -54,15 +63,6 @@ h4.data-num{
     font-size: $base-font-size;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  &.percent-30{
-    color: #F4565D;
-  }
-  &.percent-50{
-    color: #F6A623;
-  }
-  &.percent-normal{
-    color: #32D192;
   }
   .show-more{
     font-size: $base-font-size;
