@@ -1,10 +1,20 @@
 .ui-tile{
   cursor: pointer;
-
+  transition: .15s linear opacity;
   &:hover{
     .tile-data-label{
       color: $text-color;
     }
+  }
+}
+.data-tiles:hover{
+  .ui-tile{
+    opacity: .7;
+    transition: .15s linear opacity;
+  }
+  .ui-tile:hover{
+    opacity: 1;
+    transition: .15s linear opacity;
   }
 }
 .data-section{

@@ -168,6 +168,9 @@ a.logo{
 .text-error{
   color: $status-warning;
 }
+.text-valid{
+    color: $status-valid;
+}
 /**
  * Clearfix
  */
@@ -187,6 +190,15 @@ ul.styled-list{
         display: table;
         clear: both;
     }
+}
+.middot{
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.4;
+    color: $grey-color-dark; 
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
 }
 
 

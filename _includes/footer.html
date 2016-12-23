@@ -5,6 +5,7 @@
     <h4>
       Weekly Conversion Trend
     </h4>
+    There is a <strong class="text-error">-10%</strong> decrease in conversion from previous week.
   </div>
   <div class="ui-modal-body">
     <canvas id="myConversion"></canvas>  
@@ -131,7 +132,7 @@ var myRevenue = new Chart(ctx1, {
 $(document).ready(function(){
 
 });
-$('a[data-modal]').click(function(event) {
+$('a[data-modal], [data-modal]').click(function(event) {
   $(".ui-modal").modal();
   return false;
 });
