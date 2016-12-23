@@ -21,6 +21,7 @@
 var ctx = document.getElementById("mySessions");
 var ctx1 = document.getElementById("myRevenue");
 var ctx2 = document.getElementById("myConversion");
+
 var sessionData = {
 
       labels: ["Dec 16", "Dec 17", "Dec 18", "Dec 19", "Dec 20", "Dec 21", "Dec 22"],
@@ -110,14 +111,9 @@ var mySessions = new Chart(ctx, {
 
 var myRevenue = new Chart(ctx1, {
     type: 'doughnut',
-    options: {
-      tooltips: false,
-      hover: false
-    },
     data: {
         labels: ["Hotels", "Getaways", "Beauty", "Dining"],
         datasets: [{
-            label: '# of Votes',
             data: [3365, 3327, 2125, 376],
             backgroundColor: [
                 '#EA733C',
@@ -129,6 +125,8 @@ var myRevenue = new Chart(ctx1, {
         }]
     },
 });
+
+
 $(document).ready(function(){
 
 });
@@ -144,4 +142,8 @@ $('.day-selector-slide').slick({
   infinite: false,
   initialSlide: 13
 });
+$('ul.nav-tabs li').click(function(){
+    $('ul.nav-tabs li').removeClass('is-active');
+    $(this).addClass('is-active');
+  })
 </script>

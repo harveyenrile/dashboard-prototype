@@ -64,6 +64,10 @@ h3.data-num{
     font-weight: 700;
     text-transform: uppercase;
   }
+  .small-label{
+    font-weight: normal;
+    display: block;
+  }
   .show-more{
     font-size: $base-font-size;
     vertical-align: top;
@@ -168,4 +172,24 @@ h3.data-num{
     text-align: right;
     flex-grow: 1;
   }
+}
+.percentage-bar{
+  background-color: $grey-color-light;
+  height: 30px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0px 1px 5px rgba(0,0,0,.15);
+  margin-bottom: 20px;
+  .progress{
+    width: 100%;
+    height: 100%;
+    background-color: #2EC4B6;
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,.15);
+    position: absolute;
+  }
+}
+h2.pf-title{
+  font-size: 8em;
+  font-weight: 300;
 }

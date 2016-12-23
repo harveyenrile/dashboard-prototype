@@ -156,9 +156,13 @@ a.logo{
 .text-right{
     text-align: right;
 }
+.text-center{
+    text-align: center;
+}
 .text-large{
     font-size: 120%;
 }
+
 .pull-left{
     float: left;
 }
@@ -202,4 +206,12 @@ ul.styled-list{
 }
 
 
-
+hr{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  border-top: 1px solid $grey-color-light;
+  &.dotted{
+    border-top: none;
+  }
+}
