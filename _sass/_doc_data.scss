@@ -17,13 +17,19 @@
     transition: .15s linear opacity;
   }
 }
+.top-12-deals{
+  background-color: #fff;
+  padding: 30px 0;
+}
 .data-section{
   display: block;
   border: 2px solid $grey-color-light;
   overflow: hidden;
+  box-sizing: border-box;
   zoom: 1;
   border-radius: 5px; 
   margin-bottom: 30px;
+  background-color: #fff;
   .subnav-list{
     margin-bottom: 0;
   }
@@ -142,10 +148,12 @@ h3.data-num{
   button.slick-prev{
     background-image: url(../images/caret-left.svg);
     left: 0px;
+    background-color: transparent;
   }
   button.slick-next{
     background-image: url(../images/caret-right.svg);
     right: 0;
+    background-color: transparent;
   }
 }
 
