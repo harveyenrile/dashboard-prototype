@@ -128,22 +128,22 @@ var myRevenue = new Chart(ctx1, {
 
 
 $(document).ready(function(){
+  $('a[data-modal], [data-modal]').click(function(event) {
+    $(".ui-modal").modal();
+    return false;
+  });
+  $('.day-selector-slide').slick({
+    slidesToShow: 7,
+    arrows: true,
+    slidesToScroll: 7,
+    draggable: true,
+    infinite: false,
+    initialSlide: 13
+  });
+  $('ul.nav-tabs li').click(function(){
+      $('ul.nav-tabs li').removeClass('is-active');
+      $(this).addClass('is-active');
+    })
+});
 
-});
-$('a[data-modal], [data-modal]').click(function(event) {
-  $(".ui-modal").modal();
-  return false;
-});
-$('.day-selector-slide').slick({
-  slidesToShow: 7,
-  arrows: true,
-  slidesToScroll: 7,
-  draggable: true,
-  infinite: false,
-  initialSlide: 13
-});
-$('ul.nav-tabs li').click(function(){
-    $('ul.nav-tabs li').removeClass('is-active');
-    $(this).addClass('is-active');
-  })
 </script>
